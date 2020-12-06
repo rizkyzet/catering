@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', 'Auth\LoginController@showLoginForm');
-Route::get('/kiddos', 'HomeController@kiddos')->name('home.kiddos');
+
+Route::get('/', 'HomeController@kiddos')->name('home.kiddos');
 Route::get('/detail-menu/{slug}', 'HomeController@detailMenu')->name('home.detail');
 
 Route::get('/admin/kategori', 'Admin\KategoriController@index')->name('kategori.index');
