@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'asset_url'  => 'http://kiddos-catering.herokuapp.com/public',
+    'asset_url'  => 'http://kiddos-catering.herokuapp.com/',
 
     /*
     |--------------------------------------------------------------------------
