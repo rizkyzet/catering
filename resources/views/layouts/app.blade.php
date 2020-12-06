@@ -22,7 +22,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     {{-- Font-awasome --}}
     <script src="https://kit.fontawesome.com/583cd20739.js" crossorigin="anonymous"></script>
-    @livewireStyles()
+    <livewire:styles />
 </head>
 
 <body>
