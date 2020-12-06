@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{$loop->iteration}}</td>
                     <td class="text-center">
-                        <img src="{{asset('uploads/'.$m->foto)}}" alt="Menu Makanan"
+                        <img src="{{asset($m->foto)}}" alt="Menu Makanan"
                             style="height: 80px;object-fit:cover;object-position:center;">
                     </td>
                     <td class="align-middle">{{$m->sub_kategori->kategori->nama}}</td>
