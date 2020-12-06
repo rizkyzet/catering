@@ -63,7 +63,7 @@ class MenuController extends Controller
             'deskripsi' => ['required'],
         ]);
         $sub_kategori = \App\Sub_kategori::find($request->id_sub_kategori);
-        $foto = $request->file('foto')->store('images/menu');
+        $foto = $request->file('foto');
         $pathToFile = Storage::disk('public')->put('uploads/', $foto);
         $slug = Str::slug($request->nama . '-sub-kategori-' . $sub_kategori->nama);
         unset($attr['id_kategori']);
