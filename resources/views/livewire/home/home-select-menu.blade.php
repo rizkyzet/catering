@@ -39,7 +39,7 @@
         @foreach ($menu as $menu)
         <div class="col mb-4">
             <div class="card h-100 shadow">
-                <img src="{{asset('storage/'.$menu->foto)}}" class="card-img-top" alt="...">
+                <img src="{{asset($menu->foto)}}" class="card-img-top" alt="...">
                 <div class="card-menu card-body">
                     <h5 class="card-title font-weight-bold">{{$menu->nama}}</h5>
                     <small class="text-muted py-0">{{$menu->sub_kategori->kategori->nama}} &middot;

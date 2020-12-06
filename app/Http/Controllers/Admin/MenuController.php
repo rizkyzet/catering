@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Menu;
+use Facade\FlareClient\Stacktrace\File;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
@@ -117,6 +118,7 @@ class MenuController extends Controller
      */
     public function destroy(Menu $menu)
     {
+
         $menu->delete();
         return redirect()->route('menu.index')->with('success', 'Data Berhasil Dihapus!');
     }

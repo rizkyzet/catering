@@ -6,7 +6,7 @@
 
         <div class="row no-gutters ">
             <div class="col-md-4">
-                <img src="{{asset('storage/'.$menu->foto)}}" class="card-img" alt="...">
+                <img src="{{asset($menu->foto)}}" class="card-img" alt="...">
             </div>
             <div class="col-md-8 position-relative bg-white px-3">
                 <img src="{{asset('storage/images/bg/Ellipse-1.png')}}" alt="" class="ellipse-1">
