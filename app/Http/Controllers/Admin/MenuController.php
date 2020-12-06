@@ -7,6 +7,7 @@ use App\Menu;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
@@ -63,9 +64,10 @@ class MenuController extends Controller
         ]);
         $sub_kategori = \App\Sub_kategori::find($request->id_sub_kategori);
         $foto = $request->file('foto')->store('images/menu');
+        $pathToFile = Storage::disk('public')->put('uploads/', $foto);
         $slug = Str::slug($request->nama . '-sub-kategori-' . $sub_kategori->nama);
         unset($attr['id_kategori']);
-        $attr['foto'] = $foto;
+        $attr['foto'] = $pathToFile;
         $attr['slug'] = $slug;
 
         Menu::create($attr);
