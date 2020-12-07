@@ -34,7 +34,7 @@ class HomeSelectMenu extends Component
         if ($this->idKategori == 'all' && $this->id_sub_kategori == 'all') {
             $this->id_sub_kategori = 'all';
             $sub_kategori = [];
-            $menu = Menu::paginate(2);
+            $menu = Menu::paginate(4);
         } else {
 
             $sub_kategori = \App\Sub_kategori::where('id_kategori', $this->idKategori)->get();
@@ -43,9 +43,9 @@ class HomeSelectMenu extends Component
                 foreach ($sub_kategori as $s) {
                     $where_sub[] = $s->id;
                 };
-                $menu = Menu::whereIn('id_sub_kategori', $where_sub)->paginate(2);
+                $menu = Menu::whereIn('id_sub_kategori', $where_sub)->paginate(4);
             } else {
-                $menu = Menu::where('id_sub_kategori', $this->id_sub_kategori)->paginate(2);
+                $menu = Menu::where('id_sub_kategori', $this->id_sub_kategori)->paginate(4);
             }
         }
 
