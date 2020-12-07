@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'asset_url'  => 'http://kiddos-catering.herokuapp.com',
+    'asset_url'  => env('LIVEWIRE_URL'),
     // 'asset_url'  => null,
     /*
     |--------------------------------------------------------------------------

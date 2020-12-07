@@ -100,30 +100,37 @@ label:hover {
 
 
 .card-img-top {
+    box-sizing: border-box;
     height: 270px;
     object-fit: cover;
     object-position: center;
+    border-bottom: 10px solid #aa3a3a;   
 }
 
 .card-title {
-    font-size: 15px;
+
+    margin-bottom: -2px;
 }
 
-.card-menu a {
+.card-footer a {
     background-color: white !important;
     border: 1px solid #aa3a3a;
     color: #aa3a3a;
     font-weight: bold;
 }
 
-.card-menu a:hover {
+.card-footer a:hover {
     background-color: #aa3a3a !important;
     border: 1px solid white;
 }
 
-.card-title {
-    margin-bottom: -1px;
+.card-body .harga {
+    font-size: 16px;
 }
+.card-body .harga span {
+    font-size: 20px;
+}
+
 
 
 .kiddos-footer {
