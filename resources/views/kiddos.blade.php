@@ -8,7 +8,7 @@
                 <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                     class="d-block mx-auto" alt="...">
                 <div class="carousel-caption d-none d-md-block p-3 bg-white text-dark">
-                    <h4>Selamat Datang di Kiddos Catering</h4>
+                    <h5>Selamat Datang di Kiddos Catering</h5>
                     <p>Silahkan untuk melihat menu yang tersedia</p>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                     class="d-block mx-auto" alt="...">
                 <div class="carousel-caption d-none d-md-block p-3 bg-white text-dark">
-                    <h4>Selamat Datang di Kiddos Catering</h4>
+                    <h5>Selamat Datang di Kiddos Catering</h5>
                     <p>Silahkan untuk melihat menu yang tersedia</p>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                     class="d-block mx-auto" alt="...">
                 <div class="carousel-caption d-none d-md-block p-3 bg-white text-dark">
-                    <h4>Selamat Datang di Kiddos Catering</h4>
+                    <h5>Selamat Datang di Kiddos Catering</h5>
                     <p>Silahkan untuk melihat menu yang tersedia</p>
                 </div>
             </div>

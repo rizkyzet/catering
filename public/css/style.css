@@ -42,6 +42,10 @@ body {
     opacity: 80%;
 
 }
+.carousel-caption p {
+    line-height: 1.2;
+
+}
 
 .nav-link {
     font-weight: bold;
