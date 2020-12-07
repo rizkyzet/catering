@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Kategori;
 use App\Menu;
 use Facade\FlareClient\Stacktrace\File;
 use Illuminate\Http\Request;
@@ -26,6 +27,10 @@ class MenuController extends Controller
     public function index()
     {
         $menu = Menu::all();
+
+
+
+
         return view('admin.menu.index', compact('menu'));
     }
 
@@ -65,7 +70,7 @@ class MenuController extends Controller
         ]);
         $sub_kategori = \App\Sub_kategori::find($request->id_sub_kategori);
         $foto = $request->file('foto');
-        $pathToFile = Storage::disk('public')->put('uploads/', $foto);
+        $pathToFile = Storage::disk('public')->put('uploads', $foto);
         $slug = Str::slug($request->nama . '-sub-kategori-' . $sub_kategori->nama);
         unset($attr['id_kategori']);
         $attr['foto'] = $pathToFile;

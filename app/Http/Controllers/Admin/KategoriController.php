@@ -110,7 +110,7 @@ class KategoriController extends Controller
      */
     public function destroy(Kategori $kategori)
     {
-        $kategori->sub_kategori()->delete();
+        // $kategori->sub_kategori()->delete();
         $kategori->delete();
         return redirect()->route('kategori.index')->with('success', 'Data Kategori Berhasil Dihapus!');
     }

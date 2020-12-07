@@ -43,7 +43,7 @@ return [
     */
 
     'asset_url'  => 'http://kiddos-catering.herokuapp.com',
-
+    // 'asset_url'  => null,
     /*
     |--------------------------------------------------------------------------
     | Livewire Endpoint Middleware Group
