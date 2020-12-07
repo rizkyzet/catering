@@ -40,7 +40,18 @@ Route::delete('/admin/menu/{menu:slug}', 'Admin\MenuController@destroy')->name('
 
 
 
-
 Auth::routes();
 
+Route::get('/register', function () {
+    return abort(403, 'Under Construction');
+});
+Route::get('/password/reset', function () {
+    return abort(403, 'Under Construction');
+});
+Route::get('/about', function () {
+    return abort(403, 'Under Construction');
+});
+Route::get('/contact', function () {
+    return abort(403, 'Under Construction');
+});
 Route::get('/home', 'HomeController@index')->name('home');

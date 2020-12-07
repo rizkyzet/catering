@@ -3,9 +3,12 @@
 namespace App\Http\Livewire\Home;
 
 use Livewire\Component;
+use Livewire\WithPagination;
+use App\Menu;
 
 class HomeSelectMenu extends Component
 {
+    use WithPagination;
 
     public $idKategori = 'all';
     public $id_sub_kategori = 'all';
@@ -31,7 +34,7 @@ class HomeSelectMenu extends Component
         if ($this->idKategori == 'all' && $this->id_sub_kategori == 'all') {
             $this->id_sub_kategori = 'all';
             $sub_kategori = [];
-            $menu = \App\Menu::all();
+            $menu = Menu::paginate(2);
         } else {
 
             $sub_kategori = \App\Sub_kategori::where('id_kategori', $this->idKategori)->get();
@@ -40,9 +43,9 @@ class HomeSelectMenu extends Component
                 foreach ($sub_kategori as $s) {
                     $where_sub[] = $s->id;
                 };
-                $menu = \App\Menu::whereIn('id_sub_kategori', $where_sub)->get();
+                $menu = Menu::whereIn('id_sub_kategori', $where_sub)->paginate(2);
             } else {
-                $menu = \App\Menu::where('id_sub_kategori', $this->id_sub_kategori)->get();
+                $menu = Menu::where('id_sub_kategori', $this->id_sub_kategori)->paginate(2);
             }
         }
 

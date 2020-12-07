@@ -21,7 +21,6 @@
                         {{$menu->deskripsi}}
                     </p>
 
-                    <button class="btn">Add to cart</button>
 
                 </div>
             </div>

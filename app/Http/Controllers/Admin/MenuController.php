@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+// use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class MenuController extends Controller
 {
@@ -26,6 +27,8 @@ class MenuController extends Controller
      */
     public function index()
     {
+
+
         $menu = Menu::all();
 
 
@@ -70,7 +73,10 @@ class MenuController extends Controller
         ]);
         $sub_kategori = \App\Sub_kategori::find($request->id_sub_kategori);
         $foto = $request->file('foto');
-        $pathToFile = Storage::disk('public')->put('uploads', $foto);
+        // $pathToFile = Storage::disk('public')->put('uploads', $foto);
+        // $uploadedFileUrl = Cloudinary::upload($foto->getRealPath())->getSecurePath();
+        $result = $request->file('foto')->storeOnCloudinary('KiddosMenu');
+        $pathToFile = $result->getSecurePath();
         $slug = Str::slug($request->nama . '-sub-kategori-' . $sub_kategori->nama);
         unset($attr['id_kategori']);
         $attr['foto'] = $pathToFile;

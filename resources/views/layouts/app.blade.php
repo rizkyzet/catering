@@ -45,10 +45,10 @@
                             <a href="{{route('home.kiddos')}}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">About</a>
+                            <a href="" class="nav-link disabled">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Contact</a>
+                            <a href="" class="nav-link disabled">Contact</a>
                         </li>
                     </ul>
 
@@ -61,7 +61,7 @@
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link disabled" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @endif
                         @else
