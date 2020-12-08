@@ -38,7 +38,7 @@ Route::get('/admin/menu/create', 'Admin\MenuController@create')->name('menu.crea
 Route::post('/admin/menu/create', 'Admin\MenuController@store')->name('menu.store');
 Route::delete('/admin/menu/{menu:slug}', 'Admin\MenuController@destroy')->name('menu.delete');
 
-
+Route::get('/calendar', 'CalendarController@index');
 
 Auth::routes();
 

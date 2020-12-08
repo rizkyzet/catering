@@ -18,13 +18,13 @@
     <div class="sub-kategori d-flex flex-wrap mt-4" wire:loading.class="opacity">
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="id_sub_kategori" id="id_sub_kategori" value="all"
-                wire:model.lazy="id_sub_kategori">
+                wire:model.lazy="idSubKategori">
             <label class="form-check-label" for="id_sub_kategori">All</label>
         </div>
         @foreach ($sub_kategori as $s)
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="id_sub_kategori" id="sub_{{$s->id}}" value="{{$s->id}}"
-                wire:model.lazy="id_sub_kategori">
+                wire:model.lazy="idSubKategori">
             <label class="form-check-label" for="sub_{{$s->id}}">{{$s->nama}}</label>
         </div>
         @endforeach
@@ -50,9 +50,13 @@
             </div>
         </div>
         @endforeach
+    </div>
+    <div>
+        {{$menu->links()}}
 
     </div>
-    {{$menu->links()}}
+
+
     {{-- @dump($idKategori)
     @dump($id_sub_kategori)
     @dump($menu) --}}

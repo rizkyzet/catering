@@ -11,41 +11,49 @@ class HomeSelectMenu extends Component
     use WithPagination;
 
     public $idKategori = 'all';
-    public $id_sub_kategori = 'all';
+    public $idSubKategori = 'all';
 
 
 
 
     public function updatedIdKategori($value)
     {
-        $this->id_sub_kategori = 'all';
+        $this->resetPage();
+        $this->idSubKategori = 'all';
+    }
+
+    public function updatedIdSubKategori()
+    {
+        $this->resetPage();
     }
 
     public function render()
     {
 
+
         $kategori = \App\Kategori::all();
 
         if ($this->idKategori == 'all') {
 
-            $this->id_sub_kategori = 'all';
+            $this->idSubKategori = 'all';
         }
 
-        if ($this->idKategori == 'all' && $this->id_sub_kategori == 'all') {
-            $this->id_sub_kategori = 'all';
+
+        if ($this->idKategori == 'all' && $this->idSubKategori == 'all') {
+            $this->idSubKategori = 'all';
             $sub_kategori = [];
-            $menu = Menu::paginate(4);
+            $menu = Menu::paginate(1);
         } else {
 
             $sub_kategori = \App\Sub_kategori::where('id_kategori', $this->idKategori)->get();
 
-            if ($this->id_sub_kategori == 'all') {
+            if ($this->idSubKategori == 'all') {
                 foreach ($sub_kategori as $s) {
                     $where_sub[] = $s->id;
                 };
-                $menu = Menu::whereIn('id_sub_kategori', $where_sub)->paginate(4);
+                $menu = Menu::whereIn('id_sub_kategori', $where_sub)->paginate(1);
             } else {
-                $menu = Menu::where('id_sub_kategori', $this->id_sub_kategori)->paginate(4);
+                $menu = Menu::where('id_sub_kategori', $this->idSubKategori)->paginate(1);
             }
         }
 

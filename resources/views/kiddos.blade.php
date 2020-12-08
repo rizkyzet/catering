@@ -45,6 +45,8 @@
     @livewire('home.home-select-menu')
 
 
+
+
 </div>
 @include('layouts/footer')
 @endsection
