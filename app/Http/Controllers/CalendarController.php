@@ -68,7 +68,8 @@ class CalendarController extends Controller
         
                 success: function (data) {
                     $('.content-menu').html(data);
-                window.$('#myModal').modal('show');
+                    jQuery.noConflict();
+                    $('#myModal').modal('show');
                 }
             })
             }",
