@@ -50,25 +50,27 @@
 {!!$calendar::script()!!}
 
 <script>
-    function tes(id){
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+    $(document).ready(function(){
+        function tes(id){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+            url: 'http://kiddos-catering.herokuapp.com/jadwal/',
+            data: {
+                id: id
+            },
+            method: 'post',
+    
+            success: function (data) {
+                $('.content-menu').html(data);
+        $('#myModal').modal('show');
             }
-        });
-        $.ajax({
-        url: 'http://kiddos-catering.herokuapp.com/jadwal/',
-        data: {
-            id: id
-        },
-        method: 'post',
-
-        success: function (data) {
-            $('.content-menu').html(data);
-    $('#myModal').modal('show');
-        }
+        })
+    }
     })
-}
 </script>
 @endpush
 

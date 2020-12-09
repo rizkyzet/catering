@@ -111,7 +111,7 @@
 
 
     @stack('before-scripts')
-    {{-- @livewireScripts() --}}
+    @livewireScripts()
     @stack('after-scripts')
 </body>
 
