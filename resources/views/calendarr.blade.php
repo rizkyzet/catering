@@ -141,7 +141,7 @@
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"
         integrity="sha256-oenhI3DRqaPoTMAVBBzQUjOKPEdbdFFtTCNIosGwro0=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
         function tes(id){
                 $.ajaxSetup({
                     headers: {
@@ -166,7 +166,7 @@
         }
 
 
-    </script>
+    </script> --}}
     {!!$calendar::script()!!}
 
 
