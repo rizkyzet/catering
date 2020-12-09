@@ -53,7 +53,25 @@ class CalendarController extends Controller
         $calendar::setId('1');
         $calendar::setCallbacks([
             'select' => 'function(selectionInfo){}',
-            'eventClick' => "function(info){ tes(info.event.id)}",
+            'eventClick' => "function(info){ 
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': jQuery('meta[name=csrf-token]').attr('content')
+                    }
+                });
+                $.ajax({
+                url: 'http://kiddos-catering.herokuapp.com/jadwal/',
+                data: {
+                    id: info.event.id
+                },
+                method: 'post',
+        
+                success: function (data) {
+                    $('.content-menu').html(data);
+                $('#myModal').modal('show');
+                }
+            })
+            }",
             'eventContent' => "function(){
             
                 
