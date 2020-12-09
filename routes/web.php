@@ -46,7 +46,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 
 Route::get('/jadwal', 'CalendarController@index')->name('calendar.index');
-Route::post('/jadwal', 'CalendarController@ajax')->name('calendar.ajax');
+Route::post('/ajax', 'CalendarController@ajax')->name('calendar.ajax');
 
 Auth::routes();
 

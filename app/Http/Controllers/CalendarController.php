@@ -60,7 +60,7 @@ class CalendarController extends Controller
                     }
                 });
                 $.ajax({
-                url: 'http://kiddos-catering.herokuapp.com/jadwal/',
+                url: 'http://kiddos-catering.herokuapp.com/ajax',
                 data: {
                     id: info.event.id
                 },
