@@ -56,7 +56,7 @@ class CalendarController extends Controller
             'eventClick' => "function(info){ 
                 $.ajaxSetup({
                     headers: {
-                        'X-CSRF-TOKEN': jQuery('meta[name=_token]').attr('content')
+                        'X-CSRF-TOKEN': jQuery('meta[name=" . '"csrf-token"' . "]').attr('content')
                     }
                 });
                 $.ajax({
