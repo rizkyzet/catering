@@ -140,7 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"
         integrity="sha256-oenhI3DRqaPoTMAVBBzQUjOKPEdbdFFtTCNIosGwro0=" crossorigin="anonymous"></script>
 
-    {{-- <script type="text/javascript">
+    <script type="text/javascript">
         function tes(id){
                 $.ajaxSetup({
                     headers: {
@@ -156,7 +156,8 @@
         
                 success: function (data) {
                     $('.content-menu').html(data);
-                window.$("#myModal").modal("show");
+                    jQuery.noConflict();
+                $("#myModal").modal("show");
     
        
                 }
@@ -164,7 +165,7 @@
         }
 
 
-    </script> --}}
+    </script>
     {!!$calendar::script()!!}
 
 

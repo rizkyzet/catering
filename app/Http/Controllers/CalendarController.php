@@ -31,7 +31,7 @@ class CalendarController extends Controller
 
 
 
-
+        $token = csrf_token();
         $calendar = new \Calendar();
         $calendar::addEvents($events)
             ->setOptions([
@@ -53,28 +53,8 @@ class CalendarController extends Controller
         $calendar::setId('1');
         $calendar::setCallbacks([
             'select' => 'function(selectionInfo){}',
-            'eventClick' => "function(info){ 
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': jQuery('meta[name=" . '"csrf-token"' . "]').attr('content')
-                    }
-                });
-                $.ajax({
-                url: 'http://kiddos-catering.herokuapp.com/ajax',
-                data: {
-                    id: info.event.id
-                },
-                method: 'post',
-        
-                success: function (data) {
-                    $('.content-menu').html(data);
-                    jQuery.noConflict();
-                    $('#myModal').modal('show');
-                }
-            })
-            }",
-            'eventContent' => "function(){
-            
+            'eventClick' => "function(info){
+             tes(info.event.id)
                 
             }"
         ]);
