@@ -14,7 +14,8 @@ class Menu extends Model
         return $this->belongsTo(Sub_kategori::class, 'id_sub_kategori');
     }
 
-    public function getMenuByKategori()
+    public function jadwal()
     {
+        return $this->hasMany(jadwal::class, 'id_menu');
     }
 }

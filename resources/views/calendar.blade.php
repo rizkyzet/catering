@@ -1,8 +1,15 @@
 @extends('layouts/app')
 @section('content')
 <div class="container">
+    <div class="row animate__animated animate__lightSpeedInLeft">
+        <div class="col-4 d-flex align-items-end justify-content-end py-0">
+            <img class="img-fluid py-0"
+                src="https://res.cloudinary.com/kiddos-catering/image/upload/v1607531922/char/hijabsis_hxv2ht.png"
+                alt="">
+        </div>
+        <div class="col-8"> {!!$calendar::calendar()!!}</div>
+    </div>
 
-    {!!$calendar::calendar()!!}
 </div>
 
 
@@ -10,18 +17,11 @@
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="myModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                ...
+            <div class="content-menu">
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
@@ -40,6 +40,7 @@
         text-align: center;
     }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 @endpush
 
 {{-- second --}}
@@ -49,8 +50,26 @@
 {!!$calendar::script()!!}
 
 <script>
-    function tes(){
+    function tes(id){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+        url: 'http://kiddos-catering.herokuapp.com/jadwal/',
+        data: {
+            id: id
+        },
+        method: 'post',
+
+        success: function (data) {
+            console.log(data);
+            $('.content-menu').html(data);
+
     $('#myModal').modal('show')
+        }
+    })
 }
 </script>
 @endpush

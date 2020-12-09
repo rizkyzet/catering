@@ -38,7 +38,15 @@ Route::get('/admin/menu/create', 'Admin\MenuController@create')->name('menu.crea
 Route::post('/admin/menu/create', 'Admin\MenuController@store')->name('menu.store');
 Route::delete('/admin/menu/{menu:slug}', 'Admin\MenuController@destroy')->name('menu.delete');
 
-Route::get('/calendar', 'CalendarController@index');
+Route::middleware('auth')->prefix('admin')->group(function () {
+    route::get('jadwal', 'JadwalController@index')->name('jadwal.index');
+    route::get('jadwal/create', 'JadwalController@create')->name('jadwal.create');
+    route::delete('jadwal/{jadwal}', 'JadwalController@destroy')->name('jadwal.delete');
+});
+
+
+Route::get('/jadwal', 'CalendarController@index')->name('calendar.index');
+Route::post('/jadwal', 'CalendarController@ajax')->name('calendar.ajax');
 
 Auth::routes();
 

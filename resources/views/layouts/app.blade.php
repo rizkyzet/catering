@@ -52,6 +52,9 @@
                         <li class="nav-item">
                             <a href="" class="nav-link disabled">Contact</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('calendar.index')}}" class="nav-link">Jadwal</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -77,6 +80,7 @@
                                 <a href="{{route('kategori.index')}}" class="dropdown-item">Kategori</a>
                                 <a href="{{route('sub_kategori.index')}}" class="dropdown-item">Sub Kategori</a>
                                 <a href="{{route('menu.index')}}" class="dropdown-item">Menu Makanan</a>
+                                <a href="{{route('jadwal.index')}}" class="dropdown-item">Jadwal</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
