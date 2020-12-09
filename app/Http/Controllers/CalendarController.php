@@ -60,7 +60,7 @@ class CalendarController extends Controller
             }"
         ]);
 
-        return view('calendar', compact('calendar'));
+        return view('calendarr', compact('calendar'));
     }
 
     public function ajax()
