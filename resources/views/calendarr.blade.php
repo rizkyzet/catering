@@ -134,39 +134,39 @@
 
 
     <script src="/js/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"
-        integrity="sha256-oenhI3DRqaPoTMAVBBzQUjOKPEdbdFFtTCNIosGwro0=" crossorigin="anonymous"></script>
-    {!!$calendar::script()!!}
-
-    <script>
-        function tes(id){
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $.ajax({
-            url: 'http://kiddos-catering.herokuapp.com/jadwal/',
-            data: {
-                id: id
-            },
-            method: 'post',
-    
-            success: function (data) {
-                $('.content-menu').html(data);
-        $(document).ready(function(){
-            $("#myModal").modal("show");
-
-        });
-            }
-        })
-    }
-
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"
+        integrity="sha256-oenhI3DRqaPoTMAVBBzQUjOKPEdbdFFtTCNIosGwro0=" crossorigin="anonymous"></script>
+
+    <script>
+        function tes(id){
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                url: 'http://kiddos-catering.herokuapp.com/jadwal/',
+                data: {
+                    id: id
+                },
+                method: 'post',
+        
+                success: function (data) {
+                    $('.content-menu').html(data);
+                $("#myModal").modal("show");
+    
+       
+                }
+            })
+        }
+
+
+    </script>
+    {!!$calendar::script()!!}
+
 
 
 </body>
