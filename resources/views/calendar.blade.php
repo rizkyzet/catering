@@ -50,8 +50,7 @@
 {!!$calendar::script()!!}
 
 <script>
-    $(document).ready(function(){
-        function tes(id){
+    function tes(id){
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
@@ -66,11 +65,11 @@
     
             success: function (data) {
                 $('.content-menu').html(data);
-        $('#myModal').modal('show');
+        window.$("#myModal").modal("show");
             }
         })
     }
-    })
+
 </script>
 @endpush
 
