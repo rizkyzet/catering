@@ -148,7 +148,7 @@
                     }
                 });
                 $.ajax({
-                url: 'http://kiddos-catering.herokuapp.com/jadwal/',
+                url: 'http://kiddos-catering.herokuapp.com/ajax',
                 data: {
                     id: id
                 },
