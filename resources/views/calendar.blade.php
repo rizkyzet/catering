@@ -65,7 +65,10 @@
     
             success: function (data) {
                 $('.content-menu').html(data);
-        window.$("#myModal").modal("show");
+        $(document).ready(function(){
+            $("#myModal").modal("show");
+
+        });
             }
         })
     }
