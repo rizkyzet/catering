@@ -66,7 +66,6 @@
         success: function (data) {
             console.log(data);
             $('.content-menu').html(data);
-
     $('#myModal').modal('show')
         }
     })
