@@ -7,7 +7,11 @@
                 src="https://res.cloudinary.com/kiddos-catering/image/upload/v1607531922/char/hijabsis_hxv2ht.png"
                 alt="">
         </div> --}}
-        <div class="col-12 col-lg-8"> {!!$calendar::calendar()!!}</div>
+        <div class="col-12 col-lg-8">
+            {!!$calendar::calendar()!!}
+            <p class="font-italic mt-2 float-right">*Klik nama makanan di calendar untuk melihat detail makanan.</p>
+        </div>
+
     </div>
 
 </div>
