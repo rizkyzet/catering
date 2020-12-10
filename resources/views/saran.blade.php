@@ -10,8 +10,8 @@
                 <div class="card-header">
                     <h5>Suggestion Box</h5>
                 </div>
-                <div class="card-body">
-                    <form action="{{route('saran.store')}}" method="POST">
+                <form action="{{route('saran.store')}}" method="POST">
+                    <div class="card-body">
                         @csrf
                         <div class="form-group">
                             <label for="from">Dari</label>
@@ -27,12 +27,12 @@
                             <small class="text-danger">{{$message}}</small>
                             @enderror
                         </div>
-                        <div class="card-footer text-muted">
-                            <button class="btn btn-saran btn-md float-right" type="submit">Kirim ke admin</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
 
+                    <div class="card-footer text-muted d-flex justify-content-end">
+                        <button class="btn btn-saran btn-md" type="submit">Kirim ke admin</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
