@@ -101,18 +101,29 @@
 
             <div class="container">
                 <div class="row animate__animated animate__lightSpeedInLeft">
-                    <div class="col-4 d-flex align-items-end justify-content-end py-0">
+                    {{-- <div class="col-4 d-flex align-items-end justify-content-end py-0">
                         <img class="img-fluid py-0"
                             src="https://res.cloudinary.com/kiddos-catering/image/upload/v1607531922/char/hijabsis_hxv2ht.png"
                             alt="">
-                    </div>
-                    <div class="col-8"> {!!$calendar::calendar()!!}</div>
+                    </div> --}}
+                    <div class="col-12"> {!!$calendar::calendar()!!}</div>
                 </div>
 
             </div>
 
 
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="content-menu">
 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
 
@@ -162,18 +173,7 @@
 
 
 
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="content-menu">
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
