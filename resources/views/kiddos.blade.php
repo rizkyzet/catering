@@ -47,8 +47,8 @@
 
 
 
-    <div class="modal fade modal-welcome" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModal"
-        aria-hidden="true">
+    <div class="modal fade modal-welcome" data-backdrop="static" id="welcomeModal" tabindex="-1"
+        aria-labelledby="welcomeModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
