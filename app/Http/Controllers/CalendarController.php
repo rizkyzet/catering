@@ -54,7 +54,7 @@ class CalendarController extends Controller
         $calendar::setCallbacks([
             'select' => 'function(selectionInfo){}',
             'eventClick' => "function(info){ 
-                jQuery.noConflict();
+              
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': jQuery('meta[name=csrf-token]').attr('content')
@@ -68,8 +68,8 @@ class CalendarController extends Controller
                 method: 'post',
         
                 success: function (data) {
-                    $('.content-menu').html(data);
                     jQuery.noConflict();
+                    $('.content-menu').html(data);
                     $('#myModal').modal({show:true});
                 }
             })

@@ -119,7 +119,6 @@
     </div>
 
 
-    {!!$calendar::script()!!}
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -132,33 +131,30 @@
 
     {{-- <script type="text/javascript">
         function tes(id){
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-                    }
-                });
-                $.ajax({
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
                 url: 'http://kiddos-catering.herokuapp.com/ajax',
                 data: {
                     id: id
                 },
                 method: 'post',
-        
+                
                 success: function (data) {
                     $('.content-menu').html(data);
                     jQuery.noConflict();
-                $("#myModal").modal("show");
-    
-       
+                    $("#myModal").modal("show");
+                    
+                    
                 }
             })
         }
-
-
+        
+        
     </script> --}}
-
-
-
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -172,6 +168,11 @@
             </div>
         </div>
     </div>
+    {!!$calendar::script()!!}
+
+
+
+
 </body>
 
 </html>
