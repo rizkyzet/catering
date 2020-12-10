@@ -15,16 +15,18 @@
                         @csrf
                         <div class="form-group">
                             <label for="from">Dari</label>
-                            <input type="text" id="from" class="form-control" name="from" value="Anonymous">
+                            <input type="text" id="from" class="form-control @error('from') is-invalid @enderror"
+                                name="from" value="Anonymous">
                             @error('from')
-                            <small class="text-danger">{{$message}}</small>
+                            <small class="@error('from') invalid-feedback @enderror">{{$message}}</small>
                             @enderror
                         </div>
                         <div class="form-group">
                             <label for="saran">Kritik / Saran</label>
-                            <textarea name="saran" id="saran" cols="20" rows="10" class="form-control"></textarea>
+                            <textarea name="saran" id="saran" cols="20" rows="10"
+                                class="form-control @error('saran') is-invalid @enderror"></textarea>
                             @error('saran')
-                            <small class="text-danger">{{$message}}</small>
+                            <small class="@error('saran') invalid-feedback @enderror">{{$message}}</small>
                             @enderror
                         </div>
                     </div>
