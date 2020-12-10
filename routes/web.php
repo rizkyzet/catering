@@ -48,6 +48,12 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 Route::get('/jadwal', 'CalendarController@index')->name('calendar.index');
 Route::post('/ajax', 'CalendarController@ajax')->name('calendar.ajax');
 
+
+route::get('/saran/tampung', 'SaranController@index')->name('saran.index');
+route::get('/saran', 'SaranController@create')->name('saran.create');
+route::post('/saran/simpan', 'SaranController@store')->name('saran.store');
+route::delete('/saran/hapus/{saran}', 'SaranController@destroy')->name('saran.delete');
+
 Auth::routes();
 
 Route::get('/register', function () {

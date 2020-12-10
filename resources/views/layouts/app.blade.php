@@ -60,6 +60,9 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('saran.create') }}">Saran</a>
+                        </li>
                         @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -81,6 +84,7 @@
                                 <a href="{{route('sub_kategori.index')}}" class="dropdown-item">Sub Kategori</a>
                                 <a href="{{route('menu.index')}}" class="dropdown-item">Menu Makanan</a>
                                 <a href="{{route('jadwal.index')}}" class="dropdown-item">Jadwal</a>
+                                <a href="{{route('saran.index')}}" class="dropdown-item">Saran</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}

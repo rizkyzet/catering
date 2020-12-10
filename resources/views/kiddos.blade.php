@@ -47,6 +47,40 @@
 
 
 
+    <div class="modal fade modal-welcome" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title align-self-center" id="exampleModalLabel">Selamat Datang</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Website masih dalam tahap pengembangan, jika ingin memberi saran untuk tampilan website,
+                    menemukan <span class="font-weight-bold">error/bug</span>, atau apapun itu harap hubungi admin <a
+                        href="{{route('saran.create')}}">disini</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-modal-welcome" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 @include('layouts/footer')
 @endsection
+
+@push('before-scripts')
+<script src="/js/jquery.min.js"></script>
+@endpush
+
+@push('after-scripts')
+<script>
+    $(window).on('load',function(){
+        $('#welcomeModal').modal('show');
+    });
+</script>
+@endpush

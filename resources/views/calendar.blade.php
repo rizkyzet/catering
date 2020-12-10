@@ -1,13 +1,13 @@
 @extends('layouts/app')
 @section('content')
 <div class="container">
-    <div class="row ">
+    <div class="row justify-content-center mt-4">
         {{-- <div class="col-4 d-flex align-items-end justify-content-end py-0">
             <img class="img-fluid py-0"
                 src="https://res.cloudinary.com/kiddos-catering/image/upload/v1607531922/char/hijabsis_hxv2ht.png"
                 alt="">
         </div> --}}
-        <div class="col-12"> {!!$calendar::calendar()!!}</div>
+        <div class="col-12 col-lg-8"> {!!$calendar::calendar()!!}</div>
     </div>
 
 </div>

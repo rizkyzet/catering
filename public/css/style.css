@@ -203,3 +203,73 @@ label:hover {
     bottom: 0px;
     width: 100px;
 }
+
+
+/* pagination */
+.page-item.active .page-link{
+    background-color: #aa3a3a !important;
+    border-color: #aa3a3a ;
+}
+
+button.page-link {
+    color: #aa3a3a;
+}
+
+button.page-link:hover {
+    color: #aa3a3a;
+}
+
+/* fullcalendar */
+.fc-day-today {
+    background-color: #ffffff51 !important;
+    border: 2px solid  #aa3a3a !important;
+}
+
+.fc-next-button {
+    margin-left: 5px !important;
+    background-color:#aa3a3a !important ;
+    border-color: #aa3a3a !important ;
+}
+
+.fc-prev-button {
+    margin-right: 5px;
+    background-color:#aa3a3a !important ;
+    border-color: #aa3a3a !important ;
+}
+
+.fc-today-button {
+
+    background-color:#aa3a3a !important ;
+    border-color: #aa3a3a !important ;
+}
+ 
+
+.fc-toolbar-title{
+    font-weight: bold;
+}
+
+.modal-header {
+    border-bottom: 5px solid #aa3a3a;
+}
+
+
+/* modal */
+.btn-modal-welcome {
+    background-color:#aa3a3a !important ;
+}
+
+/* card saran */
+
+.btn-saran {
+    background-color:#aa3a3a !important ;
+    color: white;
+}
+.btn-saran:hover {
+    background-color:#aa3a3a !important ;
+    color: white;
+  
+}
+
+.card.saran .card-header{
+    border-bottom: 5px solid #aa3a3a;
+}

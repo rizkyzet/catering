@@ -24,6 +24,7 @@ class CalendarController extends Controller
                 $j->id, //optionally, you can specify an event ID
                 [
                     'url' => '#',
+
                     //any other full-calendar supported parameters
                 ]
             );
@@ -35,6 +36,7 @@ class CalendarController extends Controller
         $calendar = new \Calendar();
         $calendar::addEvents($events)
             ->setOptions([
+                'themeSystem' => 'bootstrap',
                 'locale' => 'id',
                 'firstDay' => 0,
                 'displayEventTime' => true,
@@ -47,6 +49,7 @@ class CalendarController extends Controller
                     'today' => 'Hari ini',
                     'month' => 'Bulan ini'
                 ],
+                'eventColor' => '#aa3a3a'
                 // 'contentHeight' => 600,
                 // 'eventDisplay' => 'block'
             ]);
