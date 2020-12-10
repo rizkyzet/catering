@@ -9,7 +9,8 @@
         </div> --}}
         <div class="col-12 col-lg-8">
             {!!$calendar::calendar()!!}
-            <p class="font-italic mt-2 float-right">*Klik nama makanan di calendar untuk melihat detail makanan.</p>
+            <small class="font-italic mt-2 float-right">*Klik nama makanan di calendar untuk melihat detail
+                makanan.</small>
         </div>
 
     </div>
