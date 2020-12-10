@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6 col-12">
             @include('layouts/alert')
             <div class="card saran">
                 <div class="card-header">
