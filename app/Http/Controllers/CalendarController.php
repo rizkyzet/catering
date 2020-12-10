@@ -68,7 +68,6 @@ class CalendarController extends Controller
                 method: 'post',
         
                 success: function (data) {
-                    jQuery.noConflict();
                     $('.content-menu').html(data);
                     $('#myModal').modal({show:true});
                 }

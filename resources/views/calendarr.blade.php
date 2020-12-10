@@ -126,6 +126,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
+    {!!$calendar::script()!!}
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"
         integrity="sha256-oenhI3DRqaPoTMAVBBzQUjOKPEdbdFFtTCNIosGwro0=" crossorigin="anonymous"></script>
 
@@ -156,6 +157,11 @@
         
     </script> --}}
     <!-- Modal -->
+
+
+
+
+
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -168,11 +174,6 @@
             </div>
         </div>
     </div>
-    {!!$calendar::script()!!}
-
-
-
-
 </body>
 
 </html>
