@@ -54,6 +54,7 @@ class CalendarController extends Controller
         $calendar::setCallbacks([
             'select' => 'function(selectionInfo){}',
             'eventClick' => "function(info){ 
+                jQuery.noConflict();
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': jQuery('meta[name=csrf-token]').attr('content')
