@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="kiddos container border">
+<div class="kiddos container">
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner ">
             <div class="carousel-item active">
@@ -59,7 +59,7 @@
                 </div>
                 <div class="modal-body">
                     Website masih dalam tahap pengembangan, jika ingin memberi saran untuk tampilan website,
-                    menemukan <span class="font-weight-bold">error/bug</span>, atau apapun itu harap hubungi admin <a
+                    menemukan <span class="font-weight-bold">error/bug</span>, atau apapun harap hubungi admin <a
                         href="{{route('saran.create')}}">disini</a>
                 </div>
                 <div class="modal-footer">
@@ -75,12 +75,40 @@
 
 @push('before-scripts')
 <script src="/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @endpush
 
 @push('after-scripts')
 <script>
+    window.addEventListener('alert', event => {
+        const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: 'success',
+  title: 'Keranjang berhasil ditambah!',
+  position: 'center'
+})
+})
     $(window).on('load',function(){
         $('#welcomeModal').modal('show');
+        
     });
+  
 </script>
+@endpush
+
+
+
+@push('css')
+
 @endpush

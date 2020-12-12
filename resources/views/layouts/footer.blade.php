@@ -14,7 +14,7 @@
             <a class="btn btn-sm shadow btn-dark" href="">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a class="btn btn-sm btn-dark" href="https://github.com/rizkyzet/">
+            <a class="btn btn-sm btn-dark" target="_blank" href="https://github.com/rizkyzet/">
                 <i class="fab fa-github"></i>
             </a>
         </div>

@@ -14,7 +14,10 @@ class HomeSelectMenu extends Component
     public $idSubKategori = 'all';
 
 
-
+    public function tes()
+    {
+        $this->dispatchBrowserEvent('alert', ['value' => 'berhasil']);
+    }
 
     public function updatedIdKategori($value)
     {

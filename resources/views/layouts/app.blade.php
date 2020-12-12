@@ -61,8 +61,12 @@
                     <ul class="navbar-nav ">
                         <!-- Authentication Links -->
                         <li class="nav-item">
+                            @livewire('home.cart-icon')
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('saran.create') }}">Saran</a>
                         </li>
+
                         @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

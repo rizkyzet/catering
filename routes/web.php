@@ -54,6 +54,8 @@ route::get('/saran', 'SaranController@create')->name('saran.create');
 route::post('/saran/simpan', 'SaranController@store')->name('saran.store');
 route::delete('/saran/hapus/{saran}', 'SaranController@destroy')->name('saran.delete');
 
+route::get('/tes', 'TesController@index')->name('tes.index');
+
 Auth::routes();
 
 Route::get('/register', function () {

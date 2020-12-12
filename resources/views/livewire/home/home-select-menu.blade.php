@@ -45,7 +45,7 @@
 
                 <div class="card-footer d-flex">
                     <a href="{{route('home.detail',$m->slug)}}" class="btn btn-primary btn-sm ml-auto mr-1">Detail</a>
-                    <a href="" class=" btn btn-sm btn-dark text-dark disabled">Order</a>
+                    <button class=" btn btn-sm btn-primary" wire:click="tes">Order</button>
                 </div>
             </div>
         </div>
