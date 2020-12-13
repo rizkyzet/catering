@@ -140,6 +140,7 @@ label:hover {
 .card-footer a:hover,.btn-menu-card:hover {
     background-color: #aa3a3a !important;
     border: 1px solid white;
+    color: white;
 }
 
 .card-body .harga {
