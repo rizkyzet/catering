@@ -308,6 +308,6 @@ button.page-link:hover {
 }
 
 
-.table-cart tr:nth-child(2) td {
+.table-cart tr td {
     vertical-align: middle !important;
 }
