@@ -57,10 +57,10 @@ class Cart extends Component
 
         if (Auth::check()) {
 
-            $this->cart = \Cart::session(Auth::user()->id)->getContent();
+            $this->cart = \Cart::session(Auth::user()->id)->getContent()->sortBy('id');
         } else {
             $this->cart = [];
         }
-        return view('livewire.home.cart', ['cart' => $this->cart->sortBy('id')]);
+        return view('livewire.home.cart', ['cart' => $this->cart]);
     }
 }

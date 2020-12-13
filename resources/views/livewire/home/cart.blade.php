@@ -1,5 +1,5 @@
 <div>
-    <table class="table table-sm table-hover table-cart overflow-auto" wire:loading.class="opacity">
+    <table class="table table-sm table-hover table-cart overflow-auto mt-5" wire:loading.class="opacity">
         <tr>
             <th>No</th>
             <th class="text-center">Image</th>
