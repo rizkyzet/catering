@@ -44,9 +44,9 @@
                 </div>
 
                 <div class="card-footer d-flex">
-                    <a href="{{route('home.detail',$m->slug)}}" class="btn btn-primary btn-sm ml-auto mr-1">Detail</a>
-                    <button class=" btn btn-sm btn-primary btn-menu-card" wire:click="AddToCart({{$m->id}})"
-                        wire:loading.class="opacity">Order</button>
+                    <a href="{{route('home.detail',$m->slug)}}" class="btn btn-danger btn-sm ml-auto mr-1">Detail</a>
+                    <button class=" btn btn-sm btn-danger btn-menu-card" wire:click="AddToCart({{$m->id}})"
+                        wire:loading.attr="opacity">Order</button>
                 </div>
             </div>
         </div>
