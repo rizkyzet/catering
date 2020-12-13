@@ -117,7 +117,7 @@ window.addEventListener('alertLogin', event => {
 
 })
 Toast.fire({
-    icon: 'success',
+    icon: 'warning',
   title: '<span style="color:white;">Anda harus login!</span>',
   background: '#aa3a3a',
   iconColor:'#fff'
