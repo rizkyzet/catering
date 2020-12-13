@@ -20,6 +20,7 @@ class SaranController extends Controller
 
     public function index()
     {
+        $this->authorize('admin');
         $saran = Saran::all();
         return view('admin.saran.index', compact('saran'));
     }
@@ -31,6 +32,7 @@ class SaranController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         return view('saran');
     }
 
@@ -42,6 +44,7 @@ class SaranController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('admin');
         $attr = $request->validate([
             'from' => 'required',
             'saran' => 'required'
@@ -93,6 +96,7 @@ class SaranController extends Controller
      */
     public function destroy(Saran $saran)
     {
+        $this->authorize('admin');
         $saran->delete();
         return redirect()->route('saran.index')->with('success', 'Saran berhasil dihapus!');
     }

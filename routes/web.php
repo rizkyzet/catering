@@ -64,9 +64,9 @@ route::get('/tes', 'TesController@index')->name('tes.index');
 
 Auth::routes();
 
-Route::get('/register', function () {
-    return abort(403, 'Under Construction');
-});
+// Route::get('/register', function () {
+//     return abort(403, 'Under Construction');
+// });
 Route::get('/password/reset', function () {
     return abort(403, 'Under Construction');
 });

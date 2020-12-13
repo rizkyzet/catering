@@ -70,4 +70,11 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    protected function redirectTo()
+    {
+        // dd(Request::all());
+
+        return route('home.kiddos');
+    }
 }

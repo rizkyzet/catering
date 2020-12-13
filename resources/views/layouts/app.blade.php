@@ -91,7 +91,7 @@
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">Daftar</a>
                         </li>
                         @endif
                         @else
@@ -102,11 +102,14 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @can('admin')
                                 <a href="{{route('kategori.index')}}" class="dropdown-item">Kategori</a>
                                 <a href="{{route('sub_kategori.index')}}" class="dropdown-item">Sub Kategori</a>
                                 <a href="{{route('menu.index')}}" class="dropdown-item">Menu Makanan</a>
                                 <a href="{{route('jadwal.index')}}" class="dropdown-item">Jadwal</a>
                                 <a href="{{route('saran.index')}}" class="dropdown-item">Saran</a>
+                                @endcan
+
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}

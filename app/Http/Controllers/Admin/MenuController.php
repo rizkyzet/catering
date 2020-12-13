@@ -27,7 +27,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-
+        $this->authorize('admin');
 
         $menu = Menu::all();
 
@@ -44,6 +44,7 @@ class MenuController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         $kategori = \App\Kategori::all();
         $sub_kategori = \App\Kategori::all();
 
@@ -58,6 +59,7 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('admin');
         $attr = $request->validate([
             'id_kategori' => ['required'],
             'id_sub_kategori' => ['required'],
@@ -129,7 +131,7 @@ class MenuController extends Controller
      */
     public function destroy(Menu $menu)
     {
-
+        $this->authorize('admin');
         $menu->delete();
         return redirect()->route('menu.index')->with('success', 'Data Berhasil Dihapus!');
     }

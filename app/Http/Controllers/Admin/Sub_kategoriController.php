@@ -24,6 +24,7 @@ class Sub_kategoriController extends Controller
      */
     public function index()
     {
+        $this->authorize('admin');
         $sub_kategori = Sub_kategori::all();
         return view('admin/sub_kategori/index', compact('sub_kategori'));
     }
@@ -35,6 +36,7 @@ class Sub_kategoriController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         $kategori = \App\Kategori::all();
         return view('admin/sub_kategori/create', compact('kategori'));
     }
@@ -47,6 +49,7 @@ class Sub_kategoriController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('admin');
         $kategori = \App\Kategori::find($request->id_kategori);
 
 
@@ -86,6 +89,7 @@ class Sub_kategoriController extends Controller
      */
     public function edit(Sub_kategori $sub_kategori)
     {
+        $this->authorize('admin');
         $kategori = Kategori::all();
         return view('admin.sub_kategori.edit', ['kategori' => $kategori, 'sub_kategori' => $sub_kategori]);
     }
@@ -99,6 +103,7 @@ class Sub_kategoriController extends Controller
      */
     public function update(Request $request, Sub_kategori $sub_kategori)
     {
+        $this->authorize('admin');
         $kategori = \App\Kategori::find($request->id_kategori);
         $attr = $request->validate([
             'nama' => [
@@ -130,6 +135,7 @@ class Sub_kategoriController extends Controller
      */
     public function destroy(Sub_kategori $sub_kategori)
     {
+        $this->authorize('admin');
         $sub_kategori->delete();
         return redirect()->route('sub_kategori.index')->with('success', 'Data Berhasil Ditambahkan!');
     }

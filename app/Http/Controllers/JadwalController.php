@@ -14,6 +14,7 @@ class JadwalController extends Controller
      */
     public function index()
     {
+        $this->authorize('admin');
         $jadwal = Jadwal::all();
         return view('admin.jadwal.index', compact('jadwal'));
     }
@@ -25,6 +26,7 @@ class JadwalController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         return view('admin.jadwal.create');
     }
 
@@ -81,6 +83,7 @@ class JadwalController extends Controller
      */
     public function destroy(Jadwal $jadwal)
     {
+        $this->authorize('admin');
         $jadwal->delete();
 
         return redirect()->route('jadwal.index')->with('success', 'Jadwal berhasil dihapus');

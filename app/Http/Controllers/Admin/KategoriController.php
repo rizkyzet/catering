@@ -22,7 +22,7 @@ class KategoriController extends Controller
 
     public function index()
     {
-
+        $this->authorize('admin');
         $kategori = Kategori::all();
         return view('admin.kategori.index', compact('kategori'));
     }
@@ -34,6 +34,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         return view('admin.kategori.create');
     }
 
@@ -45,6 +46,7 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('admin');
         $attr = $request->validate([
             'nama' => 'required|unique:kategori,nama'
         ]);
@@ -75,6 +77,7 @@ class KategoriController extends Controller
      */
     public function edit(Kategori $kategori)
     {
+        $this->authorize('admin');
 
         return view('admin.kategori.edit', compact('kategori'));
     }
@@ -88,6 +91,7 @@ class KategoriController extends Controller
      */
     public function update(Request $request, Kategori $kategori)
     {
+        $this->authorize('admin');
         $attr = $request->validate([
             'nama' => 'required|unique:kategori,nama,' . $kategori->id . 'id'
         ]);
@@ -110,6 +114,7 @@ class KategoriController extends Controller
      */
     public function destroy(Kategori $kategori)
     {
+        $this->authorize('admin');
         // $kategori->sub_kategori()->delete();
         $kategori->delete();
         return redirect()->route('kategori.index')->with('success', 'Data Kategori Berhasil Dihapus!');
