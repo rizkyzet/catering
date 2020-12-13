@@ -16,8 +16,12 @@ class Cart extends Component
 
 
 
+
+
     public function updatingQuantityRow($value, $id)
     {
+
+
         \Cart::session(Auth::user()->id)->update($id, array(
 
             'quantity' => [
@@ -25,6 +29,8 @@ class Cart extends Component
                 'value' => $value
             ]
         ));
+        $totqty = \Cart::session(Auth::user()->id)->getTotalQuantity();
+        $this->dispatchBrowserEvent('cart-icon', ['qty' => $totqty]);
     }
 
     public function deleteCart($id)
@@ -41,6 +47,9 @@ class Cart extends Component
         ));
         $qty = \Cart::get($id)->quantity;
         $this->quantityRow[$id] = $qty;
+
+        $totqty = \Cart::session(Auth::user()->id)->getTotalQuantity();
+        $this->dispatchBrowserEvent('cart-icon', ['qty' => $totqty]);
     }
     public function tambahCart($id)
     {
@@ -50,6 +59,9 @@ class Cart extends Component
         ));
         $qty = \Cart::get($id)->quantity;
         $this->quantityRow[$id] = $qty;
+
+        $totqty = \Cart::session(Auth::user()->id)->getTotalQuantity();
+        $this->dispatchBrowserEvent('cart-icon', ['qty' => $totqty]);
     }
 
     public function render()

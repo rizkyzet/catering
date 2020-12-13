@@ -30,7 +30,12 @@
 @endpush
 
 @push('after-scripts')
-
+<script>
+    window.addEventListener('cart-icon', event => {
+     
+$('.cart-info').html(event.detail.qty);
+    });
+</script>
 @endpush
 
 

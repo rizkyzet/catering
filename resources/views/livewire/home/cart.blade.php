@@ -7,6 +7,7 @@
             <th>Harga</th>
             <th>Jumlah</th>
             <th>Action</th>
+
         </tr>
         @foreach ($cart as $c)
         <tr>
@@ -17,14 +18,18 @@
                         style="width: 100px;object-fit:cover;object-position:center;">
                     <div class="input-group mb-3 mt-1" style="width: 100px;">
                         <div class="input-group-prepend">
-                            <button wire:click="kurangCart('{{$c->id}}')" class="btn btn-sm btn-outline-primary"
-                                type="button"><i class="fas fa-angle-left"></i></button>
+                            <button wire:click="kurangCart('{{$c->id}}')"
+                                class="btn btn-sm btn-outline-danger btn-menu-card" type="button"><i
+                                    class="fas fa-angle-left"></i></button>
                         </div>
-                        <input type="text" class="form-control text-center" wire:model="quantityRow.{{$c->id}}"
+                        <input type="number" min="1" oninput="this.value = 
+                        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : 1"
+                            class="form-control text-center" wire:model="quantityRow.{{$c->id}}"
                             value="{{$c->quantity}}">
                         <div class="input-group-prepend">
-                            <button wire:click="tambahCart('{{$c->id}}')" class="btn btn-sm btn-outline-primary"
-                                type="button"><i class="fas fa-angle-right"></i></button>
+                            <button wire:click="tambahCart('{{$c->id}}')"
+                                class="btn btn-sm btn-outline-danger btn-menu-card" type="button"><i
+                                    class="fas fa-angle-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -35,11 +40,21 @@
 
             <td>{{$c->getPriceSum()}}</td>
             <td>
-                <button class="btn btn-sm btn-danger" wire:click="deleteCart('{{$c->id}}')">
+                <button class="btn btn-sm btn-danger btn-menu-card" wire:click="deleteCart('{{$c->id}}')">
                     <i class="fas fa-times"></i>
                 </button>
             </td>
         </tr>
         @endforeach
+        <tr>
+            <th colspan="6" class="text-center border">Total Bayar :
+                {{Auth::check()? Cart::session(Auth::id())->getSubTotal() : ''}}</th>
+
+        </tr>
     </table>
+
+    <div class="d-flex justify-content-end">
+        <a href="{{route('home.kiddos')}}" class="btn btn-danger btn-red mx-2">Belanja lagi</a>
+        <button class="btn btn-danger btn-red disabled" disabled>Checkout</button>
+    </div>
 </div>
