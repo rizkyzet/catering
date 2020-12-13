@@ -5,7 +5,7 @@
             <th class="text-center">Image</th>
             <th>Menu</th>
             <th>Harga</th>
-            <th>Jumlah</th>
+            <th>Total</th>
             <th>Action</th>
 
         </tr>
