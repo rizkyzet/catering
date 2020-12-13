@@ -32,7 +32,7 @@ class SaranController extends Controller
      */
     public function create()
     {
-        $this->authorize('admin');
+
         return view('saran');
     }
 
@@ -44,7 +44,7 @@ class SaranController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('admin');
+
         $attr = $request->validate([
             'from' => 'required',
             'saran' => 'required'
