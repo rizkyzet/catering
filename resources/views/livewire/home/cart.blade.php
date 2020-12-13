@@ -54,7 +54,7 @@
     </table>
 
     <div class="d-flex justify-content-end">
-        <a href="{{route('home.kiddos')}}" class="btn btn-danger btn-red mx-2">Belanja lagi</a>
+        <a href="{{route('home.kiddos')}}" class="btn btn-danger btn-red mx-2">Pesan lagi</a>
         <button class="btn btn-danger btn-red disabled" disabled>Checkout</button>
     </div>
 </div>
