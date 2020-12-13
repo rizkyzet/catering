@@ -130,14 +130,14 @@ label:hover {
     margin-bottom: -2px;
 }
 
-.card-footer a {
+.card-footer a,.btn-menu-card {
     background-color: white !important;
     border: 1px solid #aa3a3a;
     color: #aa3a3a;
     font-weight: bold;
 }
 
-.card-footer a:hover {
+.card-footer a:hover,.btn-menu-card:hover {
     background-color: #aa3a3a !important;
     border: 1px solid white;
 }
@@ -149,6 +149,11 @@ label:hover {
     font-size: 20px;
 }
 
+/* .btn-menu-card{
+    background-color: #aa3a3a !important;
+    color: white;
+    border: 1px solid  #aa3a3a !important ;
+} */
 
 
 .kiddos-footer {
@@ -288,3 +293,4 @@ button.page-link:hover {
 .card.saran .card-header{
     border-bottom: 5px solid #aa3a3a;
 }
+
