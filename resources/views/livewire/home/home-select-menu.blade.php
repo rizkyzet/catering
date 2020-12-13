@@ -45,7 +45,7 @@
 
                 <div class="card-footer d-flex">
                     <a href="{{route('home.detail',$m->slug)}}" class="btn btn-primary btn-sm ml-auto mr-1">Detail</a>
-                    <button class=" btn btn-sm btn-primary" wire:click="tes">Order</button>
+                    <button class=" btn btn-sm btn-primary" wire:click="AddToCart">Order</button>
                 </div>
             </div>
         </div>
@@ -54,6 +54,28 @@
     <div>
         {{$menu->links()}}
 
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 

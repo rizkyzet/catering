@@ -61,7 +61,11 @@
                     <ul class="navbar-nav ">
                         <!-- Authentication Links -->
                         <li class="nav-item">
-                            @livewire('home.cart-icon')
+                            <a class="nav-link" href="">
+                                <i class="fas fa-shopping-cart">
+                                </i>
+                                <span class="cart-info">0</span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('saran.create') }}">Saran</a>

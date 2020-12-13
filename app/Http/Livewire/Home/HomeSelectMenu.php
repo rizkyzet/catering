@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Home;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Menu;
@@ -14,9 +16,17 @@ class HomeSelectMenu extends Component
     public $idSubKategori = 'all';
 
 
-    public function tes()
+    public function AddToCart()
     {
-        $this->dispatchBrowserEvent('alert', ['value' => 'berhasil']);
+        if (!Auth::check()) {
+
+            $this->dispatchBrowserEvent('alertLogin', ['value' => route('login')]);
+            // session()->flash('success', 'Anda harus login!');
+            // return redirect()->to('/login');
+        } else {
+
+            $this->dispatchBrowserEvent('alert', ['value' => 'berhasil']);
+        }
     }
 
     public function updatedIdKategori($value)

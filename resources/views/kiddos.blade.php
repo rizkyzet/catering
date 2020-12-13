@@ -81,6 +81,7 @@
 @push('after-scripts')
 <script>
     window.addEventListener('alert', event => {
+        const CartInfo= parseInt( $('.cart-info').html());
         const Toast = Swal.mixin({
   toast: true,
   position: 'top-end',
@@ -92,13 +93,35 @@
     toast.addEventListener('mouseleave', Swal.resumeTimer)
   }
 })
-
+$('.cart-info').html(CartInfo+2);
 Toast.fire({
   icon: 'success',
   title: 'Keranjang berhasil ditambah!',
   position: 'center'
 })
+});
+
+
+window.addEventListener('alertLogin', event => {
+        const Toast = Swal.mixin({
+  toast: true,
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: true,
+  willClose: () => {
+    window.location.href = event.detail.value;
+  }
+
 })
+Toast.fire({
+  icon: 'error',
+  title: 'Anda harus login!',
+  position: 'center',
+
+})
+});
+
+
     $(window).on('load',function(){
         $('#welcomeModal').modal('show');
         

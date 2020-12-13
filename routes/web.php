@@ -56,6 +56,9 @@ route::delete('/saran/hapus/{saran}', 'SaranController@destroy')->name('saran.de
 
 route::get('/tes', 'TesController@index')->name('tes.index');
 
+
+
+
 Auth::routes();
 
 Route::get('/register', function () {
