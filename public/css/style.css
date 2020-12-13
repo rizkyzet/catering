@@ -185,9 +185,9 @@ label:hover {
 }
 
 
-.detail-menu .card-img {
+/* .detail-menu .card-img {
     border-radius: 20px;
-}
+} */
 
 .detail-menu .row {
     margin-left: -50px;
@@ -302,3 +302,12 @@ button.page-link:hover {
     border-bottom: 5px solid #aa3a3a;
 }
 
+
+.container-cart{
+    height: 100vh;
+}
+
+
+.table-cart tr:nth-child(2) td {
+    vertical-align: middle !important;
+}

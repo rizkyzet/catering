@@ -28,13 +28,15 @@ class HomeSelectMenu extends Component
 
             $menu = Menu::find($menu_id);
             $userID = Auth::user()->id;
-            \Cart::session($userID)->add(array(
+            \Cart::session($userID)->add([
                 'id' => $menu->id,
                 'name' => $menu->nama,
                 'price' => $menu->harga,
                 'quantity' => 1,
-                'attributes' => array(),
-            ));
+                'attributes' => [
+                    'foto' => $menu->foto
+                ],
+            ]);
 
             $quantity = \Cart::session($userID)->getTotalQuantity();
 

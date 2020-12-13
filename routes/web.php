@@ -54,6 +54,9 @@ route::get('/saran', 'SaranController@create')->name('saran.create');
 route::post('/saran/simpan', 'SaranController@store')->name('saran.store');
 route::delete('/saran/hapus/{saran}', 'SaranController@destroy')->name('saran.delete');
 
+
+route::get('cart', 'CartController@index')->name('cart.index');
+
 route::get('/tes', 'TesController@index')->name('tes.index');
 
 
