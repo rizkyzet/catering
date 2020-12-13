@@ -34,6 +34,18 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+                <ul class="navbar-nav d-lg-none d-md-none">
+                    <!-- Authentication Links -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('cart.index')}}">
+                            <i class="fas fa-shopping-cart">
+                            </i>
+                            @auth
+                            <span class="cart-info">{{Cart::session(Auth::user()->id)->getTotalQuantity()}}</span>
+                            @endauth
+                        </a>
+                    </li>
+                </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -60,7 +72,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ">
                         <!-- Authentication Links -->
-                        <li class="nav-item">
+                        <li class="nav-item d-none d-lg-inline">
                             <a class="nav-link" href="{{route('cart.index')}}">
                                 <i class="fas fa-shopping-cart">
                                 </i>
