@@ -36,6 +36,8 @@ class Cart extends Component
     public function deleteCart($id)
     {
         \Cart::session(Auth::id())->remove($id);
+        $totqty = \Cart::session(Auth::user()->id)->getTotalQuantity();
+        $this->dispatchBrowserEvent('cart-icon', ['qty' => $totqty]);
     }
 
 

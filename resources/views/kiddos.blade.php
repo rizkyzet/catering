@@ -84,7 +84,7 @@
        
         const Toast = Swal.mixin({
   toast: true,
-  position: 'top-end',
+  position: 'top-center',
   showConfirmButton: false,
   timer: 3000,
   timerProgressBar: true,
@@ -92,12 +92,14 @@
     toast.addEventListener('mouseenter', Swal.stopTimer)
     toast.addEventListener('mouseleave', Swal.resumeTimer)
   }
-})
+})   
 $('.cart-info').html(event.detail.qty);
 Toast.fire({
-  icon: 'success',
-  title: 'Keranjang berhasil ditambah!',
-  position: 'center'
+    icon: 'success',
+  title: '<span style="color:white;">Keranjang berhasil ditambah!</span>',
+  background: '#aa3a3a',
+  iconColor:'#fff',
+//   footer:'<div style="background-color:white; width:100%;color:#aa3a3a;"><i class="fas fa-shopping-cart"></i></div>'
 })
 });
 
@@ -105,6 +107,7 @@ Toast.fire({
 window.addEventListener('alertLogin', event => {
         const Toast = Swal.mixin({
   toast: true,
+  position:'top-center',
   showConfirmButton: false,
   timer: 2000,
   timerProgressBar: true,
@@ -114,9 +117,10 @@ window.addEventListener('alertLogin', event => {
 
 })
 Toast.fire({
-  icon: 'error',
-  title: 'Anda harus login!',
-  position: 'center',
+    icon: 'success',
+  title: '<span style="color:white;">Anda harus login!</span>',
+  background: '#aa3a3a',
+  iconColor:'#fff'
 
 })
 });
