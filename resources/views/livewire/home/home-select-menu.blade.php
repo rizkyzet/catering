@@ -30,7 +30,7 @@
         @endforeach
     </div>
 
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4  mt-5">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4  mt-5" wire:loading.class="opacity">
         @foreach ($menu as $m)
         <div class="col mb-4">
             <div class="card h-100 shadow">
@@ -45,7 +45,7 @@
 
                 <div class="card-footer d-flex">
                     <a href="{{route('home.detail',$m->slug)}}" class="btn btn-primary btn-sm ml-auto mr-1">Detail</a>
-                    <button class=" btn btn-sm btn-primary" wire:click="AddToCart">Order</button>
+                    <button class=" btn btn-sm btn-primary" wire:click="AddToCart({{$m->id}})">Order</button>
                 </div>
             </div>
         </div>

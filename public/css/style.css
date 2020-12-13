@@ -101,6 +101,7 @@ label:hover {
 }
 
 .opacity {
+    pointer-events: none;
     opacity: 50%;
 }
 

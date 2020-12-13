@@ -81,7 +81,7 @@
 @push('after-scripts')
 <script>
     window.addEventListener('alert', event => {
-        const CartInfo= parseInt( $('.cart-info').html());
+       
         const Toast = Swal.mixin({
   toast: true,
   position: 'top-end',
@@ -93,7 +93,7 @@
     toast.addEventListener('mouseleave', Swal.resumeTimer)
   }
 })
-$('.cart-info').html(CartInfo+2);
+$('.cart-info').html(event.detail.qty);
 Toast.fire({
   icon: 'success',
   title: 'Keranjang berhasil ditambah!',

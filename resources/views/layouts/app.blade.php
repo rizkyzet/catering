@@ -64,7 +64,9 @@
                             <a class="nav-link" href="">
                                 <i class="fas fa-shopping-cart">
                                 </i>
-                                <span class="cart-info">0</span>
+                                @auth
+                                <span class="cart-info">{{Cart::session(Auth::user()->id)->getTotalQuantity()}}</span>
+                                @endauth
                             </a>
                         </li>
                         <li class="nav-item">

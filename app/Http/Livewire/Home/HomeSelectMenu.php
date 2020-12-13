@@ -16,8 +16,9 @@ class HomeSelectMenu extends Component
     public $idSubKategori = 'all';
 
 
-    public function AddToCart()
+    public function AddToCart($menu_id)
     {
+
         if (!Auth::check()) {
 
             $this->dispatchBrowserEvent('alertLogin', ['value' => route('login')]);
@@ -25,7 +26,19 @@ class HomeSelectMenu extends Component
             // return redirect()->to('/login');
         } else {
 
-            $this->dispatchBrowserEvent('alert', ['value' => 'berhasil']);
+            $menu = Menu::find($menu_id);
+            $userID = Auth::user()->id;
+            \Cart::session($userID)->add(array(
+                'id' => $menu->id,
+                'name' => $menu->nama,
+                'price' => $menu->harga,
+                'quantity' => 1,
+                'attributes' => array(),
+            ));
+
+            $quantity = \Cart::session($userID)->getTotalQuantity();
+
+            $this->dispatchBrowserEvent('alert', ['qty' => $quantity]);
         }
     }
 
