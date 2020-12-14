@@ -75,6 +75,6 @@ class RegisterController extends Controller
     {
         // dd(Request::all());
 
-        return route('home.kiddosg');
+        return route('home.kiddos');
     }
 }
