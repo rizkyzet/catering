@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="se-pre-con"></div>
 <div class="kiddos container">
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner ">
@@ -75,6 +76,12 @@
 
 @push('before-scripts')
 <script src="/js/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".se-pre-con").fadeOut("slow");
+})
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @endpush
 
