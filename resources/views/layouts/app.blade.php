@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Kiddos catering official website | Selling a variety foods or drinks for individuals or groups.">
+        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+    <meta name="og:image" content="icon/meta_image.jpg" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
