@@ -52,7 +52,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:5', 'confirmed'],
         ]);
     }
 
@@ -75,6 +75,6 @@ class RegisterController extends Controller
     {
         // dd(Request::all());
 
-        return route('home.kiddos');
+        return route('home.kiddosg');
     }
 }
