@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-lg-6 col-12">
             @include('layouts/alert')
             <div class="card saran">

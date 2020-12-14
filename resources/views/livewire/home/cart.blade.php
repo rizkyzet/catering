@@ -1,4 +1,5 @@
 <div>
+
     <table class="table table-sm table-hover table-cart overflow-auto mt-5" wire:loading.class="opacity">
         <tr>
             <th>No</th>
@@ -36,9 +37,9 @@
 
             </td>
             <td>{{$c->name}}</td>
-            <td>{{$c->price}}</td>
+            <td>{{rupiah($c->price)}}</td>
 
-            <td>{{$c->getPriceSum()}}</td>
+            <td>{{rupiah($c->getPriceSum())}}</td>
             <td>
                 <button class="btn btn-sm btn-danger btn-menu-card" wire:click="deleteCart('{{$c->id}}')">
                     <i class="fas fa-times"></i>
@@ -48,7 +49,7 @@
         @endforeach
         <tr>
             <th colspan="6" class="text-center border">Total Bayar :
-                {{Auth::check()? Cart::session(Auth::id())->getSubTotal() : ''}}</th>
+                {{Auth::check()? rupiah( Cart::session(Auth::id())->getSubTotal()) : ''}}</th>
 
         </tr>
     </table>

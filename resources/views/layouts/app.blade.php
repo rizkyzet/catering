@@ -34,7 +34,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <ul class="navbar-nav d-lg-none d-md-none">
+                <ul class="navbar-nav d-lg-none">
                     <!-- Authentication Links -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('cart.index')}}">
