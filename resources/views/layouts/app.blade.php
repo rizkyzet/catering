@@ -4,13 +4,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Kiddos" />
-    <meta property="og:locale" content="en_GB" />
-    <meta property="og:locale:alternate" content="id_ID" />
+
+    <!-- HTML Meta Tags -->
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="description"
         content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
-    <meta name="og:image" content="icon/meta_image.jpg" />
-    <meta property="og:url" content="http://www.kiddos-catering.herokuapp.com">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Kiddos">
+    <meta itemprop="description"
+        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+    <meta itemprop="image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://kiddos-catering.herokuapp.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kiddos">
+    <meta property="og:description"
+        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+    <meta property="og:image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kiddos">
+    <meta name="twitter:description"
+        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+    <meta name="twitter:image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
+
+    <!-- Meta Tags Generated via http://heymeta.com -->
+
+
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -21,7 +45,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
     <link rel="manifest" href="icon/site.webmanifest">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+
 
 
 
