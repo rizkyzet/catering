@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Kiddos" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="id_ID" />
     <meta name="description"
         content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta name="og:image" content="icon/meta_image.jpg" />
-
+    <meta property="og:url" content="http://www.kiddos-catering.herokuapp.com">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
