@@ -11,7 +11,7 @@
         content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
 
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Kiddos">
+    <meta itemprop="name" content="Kiddos Catering">
     <meta itemprop="description"
         content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta itemprop="image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
@@ -19,14 +19,14 @@
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="http://kiddos-catering.herokuapp.com">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Kiddos">
+    <meta property="og:title" content="Kiddos Catering">
     <meta property="og:description"
         content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta property="og:image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kiddos">
+    <meta name="twitter:title" content="Kiddos Catering">
     <meta name="twitter:description"
         content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta name="twitter:image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
