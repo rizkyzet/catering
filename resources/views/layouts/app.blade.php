@@ -7,6 +7,9 @@
     <meta name="description"
         content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta name="og:image" content="icon/meta_image.jpg" />
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
