@@ -10,9 +10,10 @@ class Cart extends Component
 
     protected $cart = [];
     protected $listeners = [
-        'refreshParent' => '$refresh'
+        'tes'
     ];
     public $quantityRow;
+    public $toast;
 
 
 
@@ -75,6 +76,18 @@ class Cart extends Component
         } else {
             $this->cart = [];
         }
+
+        if (count($this->cart) > 0) {
+
+            $this->toast = false;
+        } else {
+            $this->toast = true;
+        }
+
+        if (count($this->cart) <= 0) {
+            $this->dispatchBrowserEvent('cart-empty');
+        }
+
         return view('livewire.home.cart', ['cart' => $this->cart]);
     }
 }

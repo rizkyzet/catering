@@ -1,6 +1,9 @@
 <div>
 
-    <table class="table table-sm table-hover table-cart overflow-auto mt-5" wire:loading.class="opacity">
+    @if (count($cart)>0)
+
+
+    <table class="table table-sm table-hover table-cart overflow-auto mt-5">
         <tr>
             <th>No</th>
             <th class="text-center">Image</th>
@@ -11,7 +14,7 @@
 
         </tr>
         @foreach ($cart as $c)
-        <tr>
+        <tr wire:loading.class="opacity">
             <td>{{$loop->iteration}}</td>
             <td class="d-flex justify-content-center">
                 <div class="d-flex flex-column py-2">
@@ -58,4 +61,48 @@
         <a href="{{route('home.kiddos')}}" class="btn btn-danger btn-red mx-2">Pesan lagi</a>
         <button class="btn btn-danger btn-red disabled" disabled>Checkout</button>
     </div>
+    @else
+    <div class="row  justify-content-center">
+        <div class="col-lg-8">
+            <img src="{{asset('storage/images/menu/cart-empty.png')}}" alt="" class="img-fluid">
+        </div>
+    </div>
+
+    @endif
+
+
+    @push('after-scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+      
+        var someValue = @this.get('toast');
+     if (someValue == true){
+        const Toast = Swal.mixin({
+  toast: true,
+  position: 'center',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})   
+
+Toast.fire({
+    icon: 'warning',
+  title: '<span style="color:white;">Keranjang anda kosong!</span>',
+  background: '#aa3a3a',
+  iconColor:'#fff',
+//   footer:'<div style="background-color:white; width:100%;color:#aa3a3a;"><i class="fas fa-shopping-cart"></i></div>'
+})
+     }
+       
+    })
+
+   
+
+    </script>
+
+    @endpush
 </div>
