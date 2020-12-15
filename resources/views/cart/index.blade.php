@@ -24,6 +24,12 @@
 @include('layouts/footer')
 @endsection
 
+@push('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+@endpush
+
+
+
 @push('before-scripts')
 <script src="/js/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

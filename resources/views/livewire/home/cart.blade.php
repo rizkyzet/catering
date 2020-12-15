@@ -64,7 +64,8 @@
     @else
     <div class="row  justify-content-center">
         <div class="col-lg-8">
-            <img src="{{asset('storage/images/menu/cart-empty.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('storage/images/menu/cart-empty.png')}}" alt=""
+                class="img-fluid animate__animated animate__bounceIn">
         </div>
     </div>
 
