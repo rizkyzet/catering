@@ -8,12 +8,12 @@
     <!-- HTML Meta Tags -->
     <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="description"
-        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+        content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Kiddos">
     <meta itemprop="description"
-        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+        content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta itemprop="image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
 
     <!-- Facebook Meta Tags -->
@@ -21,14 +21,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Kiddos">
     <meta property="og:description"
-        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+        content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta property="og:image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kiddos">
     <meta name="twitter:description"
-        content="Kiddos catering official website | Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
+        content="Menjual berbagai macam varian makanan dan minuman untuk perorangan atau kelompok.">
     <meta name="twitter:image" content="http://kiddos-catering.herokuapp.com/icon/meta_image.jpg">
 
     <!-- Meta Tags Generated via http://heymeta.com -->
