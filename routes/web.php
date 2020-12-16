@@ -63,6 +63,10 @@ route::get('/tes', 'TesController@index')->name('tes.index');
 
 
 Auth::routes();
+Route::get('/login/{website}', 'Auth\LoginController@redirectToProvider')->name('social.login');
+Route::get('/login/{website}/callback', 'Auth\LoginController@handleProviderCallback')->name('social.callback');
+
+
 
 // Route::get('/register', function () {
 //     return abort(403, 'Under Construction');

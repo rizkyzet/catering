@@ -18,6 +18,12 @@
                 </div>
 
                 <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <a href="{{route('social.login','google')}}" class="btn btn-sm btn-light btn-google">Continue
+                            With
+                            Google</a>
+                    </div>
+                    <hr>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
