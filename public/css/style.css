@@ -371,3 +371,8 @@ button.page-link:hover {
 .btn-red{
     background-color:#aa3a3a !important ;
 }
+
+
+.btn-google{
+    font-weight: bold;
+}

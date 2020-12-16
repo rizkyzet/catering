@@ -19,8 +19,11 @@
 
                 <div class="card-body">
                     <div class="d-flex justify-content-center">
-                        <a href="{{route('social.login','google')}}" class="btn btn-sm btn-light btn-google">Continue
-                            With
+
+                        <a href="{{route('social.login','google')}}" class="btn btn-md btn-light btn-google">
+                            <img class="mr-1" src="{{asset('icon/google-icon.png')}}" alt="" style="width: 22px;">
+                            Continue
+                            with
                             Google</a>
                     </div>
                     <hr>
@@ -60,37 +63,37 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember"
                                         {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4 d-flex justify-content-between">
-                                <button type="submit" class="btn btn-sm btn-danger btn-red">
-                                    {{ __('Login') }}
-                                </button>
-
-
-                                @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                        <label class="form-check-label" for="remember">
+                            {{ __('Remember Me') }}
+                        </label>
                 </div>
             </div>
+        </div> --}}
+
+        <div class="form-group row mb-0">
+            <div class="col-md-6 offset-md-4 d-flex justify-content-between">
+                <button type="submit" class="btn btn-sm btn-danger btn-red">
+                    {{ __('Login') }}
+                </button>
+
+
+                @if (Route::has('password.request'))
+                <a class="btn btn-link" href="{{ route('password.request') }}">
+                    {{ __('Forgot Your Password?') }}
+                </a>
+                @endif
+            </div>
         </div>
+        </form>
     </div>
+</div>
+</div>
+</div>
 </div>
 @endsection
