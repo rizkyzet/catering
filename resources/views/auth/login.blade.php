@@ -19,14 +19,24 @@
 
                 <div class="card-body">
                     <div class="d-flex justify-content-center">
-
                         <a href="{{route('social.login','google')}}" class="btn btn-md btn-light btn-google">
                             <img class="mr-1" src="{{asset('icon/google-icon.png')}}" alt="" style="width: 22px;">
-                            Continue
-                            with
-                            Google</a>
+                            Akses
+                            dengan
+                            Google
+                        </a>
                     </div>
-                    <hr>
+                    <div class="d-flex my-2">
+                        <div class="flex-grow-1">
+                            <hr>
+                        </div>
+                        <div class="text-center text-muted px-3 pt-2 font-weight-bold">
+                            atau
+                        </div>
+                        <div class="flex-grow-1">
+                            <hr>
+                        </div>
+                    </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
