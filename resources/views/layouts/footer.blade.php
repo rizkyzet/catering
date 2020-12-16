@@ -4,7 +4,7 @@
             <span class="font-weight-bold">Kiddos Catering</span>
             &#x25cf;
             <span class="font-italic">
-                perumahan pebabri blok d no. 18 kelurahan panggungjati, RT.02/RW.06, Kec.
+                Perumahan pebabri blok d no. 18 kelurahan panggungjati, RT.02/RW.06, Kec.
                 Taktakan, Kota Serang, Banten 42162
             </span>
             &#x25cf;

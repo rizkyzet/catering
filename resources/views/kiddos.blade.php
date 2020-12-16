@@ -72,6 +72,7 @@
 
 </div>
 @include('layouts/footer')
+
 @endsection
 
 @push('before-scripts')
