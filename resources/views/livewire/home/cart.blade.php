@@ -5,7 +5,7 @@
     <div class="overflow-auto">
 
 
-        <table class="table table-sm table-hover table-cart  mt-5">
+        <table class="table table-sm table-hover table-cart  mt-5" wire:loading.class="opacity">
             <tr>
                 <th>No</th>
                 <th class="text-center">Image</th>
@@ -16,7 +16,7 @@
 
             </tr>
             @foreach ($cart as $c)
-            <tr wire:loading.class="opacity">
+            <tr>
                 <td>{{$loop->iteration}}</td>
                 <td class="d-flex justify-content-center">
                     <div class="d-flex flex-column py-2">
