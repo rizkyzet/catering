@@ -368,6 +368,16 @@ button.page-link:hover {
     vertical-align: middle !important;
 }
 
+.table-cart tr:nth-child(1){
+    background-color:#aa3a3a !important ;
+    color: white;
+}
+
+.table-cart tr:nth-child(1):hover{
+    background-color:#aa3a3a !important ;
+    color: white;
+}
+
 .btn-red{
     background-color:#aa3a3a !important ;
 }

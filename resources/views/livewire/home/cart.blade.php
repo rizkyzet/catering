@@ -1,11 +1,21 @@
 <div>
 
     @if (count($cart)>0)
+    <div class="d-flex">
+        <div class="flex-grow-1">
+            <hr>
+        </div>
+        <div class="px-3">
+            <h4>Keranjang anda</h4>
+        </div>
+        <div class="flex-grow-1">
+            <hr>
+        </div>
+    </div>
+    <div class="overflow-auto" style="height: 100vh">
 
-    <div class="overflow-auto">
 
-
-        <table class="table table-sm table-hover table-cart  mt-5" wire:loading.class="opacity">
+        <table class="table table-sm table-hover table-cart  mt-5 " wire:loading.class="opacity">
             <tr>
                 <th>No</th>
                 <th class="text-center">Image</th>
