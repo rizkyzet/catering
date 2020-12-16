@@ -136,6 +136,29 @@ label:hover {
 .opacity {
     pointer-events: none;
     opacity: 50%;
+ 
+}
+
+
+
+.loader {
+    pointer-events: none;
+position: relative;    
+
+}
+
+.loader::after{
+    display: block;
+    content: '';
+    position: absolute;
+ 
+	top: 0px;
+	width: 100%;
+	height: 100%;
+    z-index: 999;
+    background: url(/icon/dual-loader-100.gif) no-repeat rgba(255, 255, 255, 0.597);
+    /* kiri kanan 50% atas bawah 15% */
+    background-position: 50% 25%;
 }
 
 

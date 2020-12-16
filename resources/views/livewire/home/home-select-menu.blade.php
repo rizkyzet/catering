@@ -15,7 +15,7 @@
         @endforeach
     </div>
 
-    <div class="sub-kategori d-flex flex-wrap mt-4" wire:loading.class="opacity">
+    <div class="sub-kategori d-flex flex-wrap mt-4">
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="id_sub_kategori" id="id_sub_kategori" value="all"
                 wire:model.lazy="idSubKategori">
@@ -45,8 +45,8 @@
 
                 <div class="card-footer d-flex">
                     <a href="{{route('home.detail',$m->slug)}}" class="btn btn-danger btn-sm ml-auto mr-1">Detail</a>
-                    <button class=" btn btn-sm btn-danger btn-menu-card" wire:click="AddToCart({{$m->id}})"
-                        wire:loading.attr="opacity">Order</button>
+                    <button class=" btn btn-sm btn-danger btn-menu-card"
+                        wire:click="AddToCart({{$m->id}})">Order</button>
                 </div>
             </div>
         </div>
