@@ -57,31 +57,36 @@ class LoginController extends Controller
     public function handleProviderCallback($website)
     {
 
+        try {
 
-        $user = Socialite::driver($website)->user();
-        $cek = User::where('email', $user->email)->first();
 
-        if ($cek) {
+            $user = Socialite::driver($website)->user();
+            $cek = User::where('email', $user->email)->first();
 
-            Auth::login($cek);
-            if ($cek->isAdmin()) {
-                return redirect()->route('home');
+            if ($cek) {
+
+                Auth::login($cek);
+                if ($cek->isAdmin()) {
+                    return redirect()->route('home');
+                } else {
+                    return redirect()->route('home.kiddos');
+                }
             } else {
+
+                $newUser = User::create([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'email_verified_at' => now(),
+                    'password' => bcrypt('dummy76859230123'),
+                ]);
+
+                Auth::login($newUser);
+
                 return redirect()->route('home.kiddos');
-            }
-        } else {
-
-            $newUser = User::create([
-                'name' => $user->name,
-                'email' => $user->email,
-                'email_verified_at' => now(),
-                'password' => bcrypt('dummy76859230123'),
-            ]);
-
-            Auth::login($newUser);
-
-            return redirect()->route('home.kiddos');
-        };
+            };
+        } catch (Exception $e) {
+            dd($e->getMessage());
+        }
     }
 
 

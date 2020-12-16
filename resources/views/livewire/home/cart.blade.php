@@ -68,25 +68,25 @@
 
             </tr>
         </table>
-
-        <div class="d-flex justify-content-end">
-            <a href="{{route('home.kiddos')}}" class="btn btn-sm btn-danger btn-red mx-2">Pesan lagi</a>
-            <button class="btn btn-sm btn-danger btn-red disabled" disabled>Checkout</button>
+    </div>
+    <div class="d-flex justify-content-end">
+        <a href="{{route('home.kiddos')}}" class="btn btn-sm btn-danger btn-red mx-2">Pesan lagi</a>
+        <button class="btn btn-sm btn-danger btn-red disabled" disabled>Checkout</button>
+    </div>
+    @else
+    <div class="row  justify-content-center">
+        <div class="col-lg-8">
+            <img src="{{asset('storage/images/menu/cart-empty.png')}}" alt=""
+                class="img-fluid animate__animated animate__bounceIn">
         </div>
-        @else
-        <div class="row  justify-content-center">
-            <div class="col-lg-8">
-                <img src="{{asset('storage/images/menu/cart-empty.png')}}" alt=""
-                    class="img-fluid animate__animated animate__bounceIn">
-            </div>
-        </div>
+    </div>
 
-        @endif
+    @endif
 
 
-        @push('after-scripts')
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
+    @push('after-scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
       
         var someValue = @this.get('toast');
      if (someValue == true){
@@ -115,8 +115,8 @@ Toast.fire({
 
    
 
-        </script>
+    </script>
 
-        @endpush
-    </div>
+    @endpush
+
 </div>
