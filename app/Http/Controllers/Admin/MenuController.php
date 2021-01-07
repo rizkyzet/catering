@@ -108,7 +108,7 @@ class MenuController extends Controller
      */
     public function edit(Menu $menu)
     {
-        //
+        // dd($menu->updateMedia());
     }
 
     /**
@@ -120,7 +120,6 @@ class MenuController extends Controller
      */
     public function update(Request $request, Menu $menu)
     {
-        //
     }
 
     /**

@@ -19,7 +19,7 @@
                 <tr>
                     <td>{{$loop->iteration}}</td>
                     <td>{{$saran->from}}</td>
-                    <td>{{$saran->saran}}</td>
+                    <td>{!!$saran->saran!!}</td>
                     <td>
                         <form action="{{route('saran.delete',$saran)}}" method="POST" class="d-inline">
                             @csrf

@@ -36,6 +36,7 @@ Route::delete('/admin/sub-kategori/{sub_kategori:slug}/delete', 'Admin\Sub_kateg
 Route::get('/admin/menu', 'Admin\MenuController@index')->name('menu.index');
 Route::get('/admin/menu/create', 'Admin\MenuController@create')->name('menu.create');
 Route::post('/admin/menu/create', 'Admin\MenuController@store')->name('menu.store');
+Route::get('/admin/menu/{menu:slug}', 'Admin\MenuController@edit')->name('menu.edit');
 Route::delete('/admin/menu/{menu:slug}', 'Admin\MenuController@destroy')->name('menu.delete');
 
 Route::middleware('auth')->prefix('admin')->group(function () {

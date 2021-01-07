@@ -29,7 +29,7 @@
                     <td class="align-middle">{{$m->sub_kategori->nama}}</td>
                     <td class="align-middle">{{$m->nama}}</td>
                     <td class="align-middle">
-                        <a class="btn btn-sm btn-success" href="">Ubah</a>
+                        <a class="btn btn-sm btn-success" href="{{route('menu.edit',$m)}}">Ubah</a>
                         <form action="{{route('menu.delete',$m)}}" method="POST" class="d-inline">
                             @csrf
                             @method('delete')
