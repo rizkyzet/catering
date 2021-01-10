@@ -37,6 +37,7 @@ Route::get('/admin/menu', 'Admin\MenuController@index')->name('menu.index');
 Route::get('/admin/menu/create', 'Admin\MenuController@create')->name('menu.create');
 Route::post('/admin/menu/create', 'Admin\MenuController@store')->name('menu.store');
 Route::get('/admin/menu/{menu:slug}', 'Admin\MenuController@edit')->name('menu.edit');
+Route::patch('/admin/menu/{menu:slug}', 'Admin\MenuController@update')->name('menu.update');
 Route::delete('/admin/menu/{menu:slug}', 'Admin\MenuController@destroy')->name('menu.delete');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
@@ -57,6 +58,7 @@ route::delete('/saran/hapus/{saran}', 'SaranController@destroy')->name('saran.de
 
 
 route::get('cart', 'CartController@index')->name('cart.index');
+route::get('whatsapp', 'CartController@whatsapp')->name('cart.whatsapp');
 
 route::get('/tes', 'TesController@index')->name('tes.index');
 

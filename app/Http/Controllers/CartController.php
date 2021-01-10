@@ -25,6 +25,21 @@ class CartController extends Controller
         return view('cart.index');
     }
 
+
+    public function whatsapp()
+    {
+        $cart = \Cart::session(\Auth::user()->id)->getContent()->sortBy('id');
+
+        $text = '';
+        foreach ($cart as $c) {
+            $text .= 'ID' . $c->id . ' ' . $c->name . ' (' . $c->quantity    . ')' . '%0A';
+        };
+        $hp = '62895359449377';
+
+        return redirect("https://api.whatsapp.com/send?phone=$hp&text=$text");
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

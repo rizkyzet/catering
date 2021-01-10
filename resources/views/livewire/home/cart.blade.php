@@ -12,7 +12,7 @@
             <hr>
         </div>
     </div>
-    <div class="overflow-auto" style="height: 100vh">
+    <div class="cart-sub-container overflow-auto" style="height: 70vh">
 
 
         <table class="table table-sm table-hover table-cart  mt-5 " wire:loading.class="opacity">
@@ -69,9 +69,10 @@
             </tr>
         </table>
     </div>
-    <div class="d-flex justify-content-end">
+    <div class="d-flex justify-content-end mt-3">
         <a href="{{route('home.kiddos')}}" class="btn btn-sm btn-danger btn-red mx-2">Pesan lagi</a>
         <button class="btn btn-sm btn-danger btn-red disabled" disabled>Checkout</button>
+        <a target="_blank" href="{{route('cart.whatsapp')}}" class="btn btn-sm btn-danger btn-red mx-2">Via Whatsapp</a>
     </div>
     @else
     <div class="row  justify-content-center">

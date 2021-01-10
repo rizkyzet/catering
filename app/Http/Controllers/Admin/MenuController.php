@@ -97,7 +97,6 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-        //
     }
 
     /**
@@ -109,6 +108,7 @@ class MenuController extends Controller
     public function edit(Menu $menu)
     {
         // dd($menu->updateMedia());
+        return view('admin.menu.edit', compact('menu'));
     }
 
     /**
@@ -120,6 +120,51 @@ class MenuController extends Controller
      */
     public function update(Request $request, Menu $menu)
     {
+        if ($request->file('foto')) {
+
+            $attr = $request->validate([
+                'id_kategori' => ['required'],
+                'id_sub_kategori' => ['required'],
+                'nama' => [
+                    'required',
+                    Rule::unique('menu')->where(function ($query) use ($request) {
+                        return $query->where('id_sub_kategori', $request->id_sub_kategori);
+                    })->ignore($menu->id)
+                ],
+                'harga' => ['required'],
+                'foto' => ['image', 'mimes:jpeg,jpg,png,svg', 'max:2048'],
+                'deskripsi' => ['required'],
+            ]);
+
+            $result = $request->file('foto')->storeOnCloudinary('KiddosMenu');
+            $pathToFile = $result->getSecurePath();
+            $attr['foto'] = $pathToFile;
+        } else {
+            $attr = $request->validate([
+                'id_kategori' => ['required'],
+                'id_sub_kategori' => ['required'],
+                'nama' => [
+                    'required',
+                    Rule::unique('menu')->where(function ($query) use ($request) {
+                        return $query->where('id_sub_kategori', $request->id_sub_kategori);
+                    })->ignore($menu->id)
+                ],
+                'harga' => ['required'],
+                'deskripsi' => ['required'],
+            ]);
+        }
+        $sub_kategori = \App\Sub_kategori::find($request->id_sub_kategori);
+        $slug = Str::slug($request->nama . '-sub-kategori-' . $sub_kategori->nama);
+        unset($attr['id_kategori']);
+        $attr['slug'] = $slug;
+
+        $menu->update($attr);
+
+        if ($menu->wasChanged()) {
+            return redirect()->route('menu.index')->with('success', 'Data Berhasil Diubah!');
+        } else {
+            return redirect()->route('menu.index');
+        }
     }
 
     /**
